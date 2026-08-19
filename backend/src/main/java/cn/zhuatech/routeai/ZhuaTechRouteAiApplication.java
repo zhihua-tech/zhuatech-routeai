@@ -1,0 +1,8 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+package cn.zhuatech.routeai;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class ZhuaTechRouteAiApplication {
+    public static void main(String[] args) { SpringApplication.run(ZhuaTechRouteAiApplication.class, args); }
+}
