@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'ROUTEAI',systemName:'知华智能配送路线平台',englishName:'AI ROUTE PLANNING',theme:{primary:'#43677a',dark:'#243b48',accent:'#ce8643'},workspace:'物流中心 / 智能调度组',fieldWorkspace:'华东物流中心 / 城配调度台',period:'2026-08-19 · 当日配送',liveText:'交通、天气与车辆于 10:43 更新',fieldContextLabel:'当前波次',fieldContext:'华东城配 · 午间波次',fieldUser:'叶宁',fieldRole:'配送调度员',adminUser:'顾清',adminRole:'物流运营负责人',
  adminTitle:'智能配送调度中心',adminBreadcrumb:'物流运营 / 路线智能',adminSubtitle:'综合路网、天气、车辆载重、司机工时和冷链时窗，为每条配送路线提供可解释的发车建议。',exportAction:'导出调度日报',createAction:'新建路线任务',chartTitle:'配送准时率趋势',chartSubtitle:'实际准时率 / 运营目标',chartLabels:['06:00','08:00','10:00','12:00','14:00','16:00','18:00','20:00','22:00'],loadTitle:'区域配送负荷',loadSubtitle:'待发路线占调度容量',recordsTitle:'重点配送路线',recordsSubtitle:'按时效、交通、天气和冷链风险排序',issueTitle:'调度异常事件',issueSubtitle:'需要改线、换车或延迟发车',
