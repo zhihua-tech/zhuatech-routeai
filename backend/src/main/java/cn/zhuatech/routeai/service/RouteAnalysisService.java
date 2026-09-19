@@ -13,9 +13,16 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 综合交通、天气、载重与司机工时评估配送路线。 */
+/**
+ * 综合交通、天气、载重与司机工时评估配送路线。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class RouteAnalysisService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result plan(Request request) {
         BigDecimal speedFactor = BigDecimal.ONE.subtract(request.trafficIndex().multiply(new BigDecimal("0.55")))
             .subtract(request.weatherRisk().multiply(new BigDecimal("0.25"))).max(new BigDecimal("0.20"));
@@ -40,6 +47,9 @@ public class RouteAnalysisService {
             "DISPATCH".equals(decision) ? "按计划发车" : "重新分配车辆、司机或途经节点", !"DISPATCH".equals(decision));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String routeNo,
                           @DecimalMin("0.1") BigDecimal distanceKm,
                           @Min(1) int stopCount,
@@ -48,6 +58,9 @@ public class RouteAnalysisService {
                           @Min(0) @Max(120) int vehicleLoadPercent,
                           @Min(0) @Max(24) int driverHoursToday,
                           boolean coldChain, @Min(1) int maximumColdChainMinutes) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String routeNo, int estimatedMinutes, int riskScore,
                          String dispatchDecision, List<String> alerts,
                          String recommendation, boolean dispatcherApprovalRequired) {}
