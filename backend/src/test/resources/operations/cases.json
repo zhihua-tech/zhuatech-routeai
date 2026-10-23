@@ -1,0 +1,64 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "totalMinutes": "#390"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "availableMinutes": "389"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "timeGap": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "speedKmH": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "distanceKm": "1",
+      "speedKmH": "90"
+    },
+    "expected": {
+      "drivingMinutes": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "stops": "0"
+    },
+    "expected": {
+      "totalMinutes": "#270"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "distanceKm": "0"
+    },
+    "expected": {
+      "drivingMinutes": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "availableMinutes": "390"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]

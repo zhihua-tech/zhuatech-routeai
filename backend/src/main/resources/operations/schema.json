@@ -1,0 +1,97 @@
+{
+  "slug": "routeai",
+  "title": "行驶服务及休息时长预算",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "distanceKm",
+      "label": "预计总里程公里",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "speedKmH",
+      "label": "预计均速公里/小时",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "stops",
+      "label": "服务站数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "serviceMinutes",
+      "label": "每站服务分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "breakMinutes",
+      "label": "计划休息分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "availableMinutes",
+      "label": "可用总分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "drivingMinutes",
+      "label": "行驶分钟"
+    },
+    {
+      "key": "stopMinutes",
+      "label": "服务分钟"
+    },
+    {
+      "key": "totalMinutes",
+      "label": "总占用分钟"
+    },
+    {
+      "key": "timeGap",
+      "label": "超出可用分钟"
+    }
+  ],
+  "description": "按总里程和情景均速计算行驶分钟，再加每站服务和休息分钟核对可用时间；不声称是实时路况或合法驾驶时限结论。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "distanceKm": "240",
+        "speedKmH": "60",
+        "stops": "8",
+        "serviceMinutes": "15",
+        "breakMinutes": "30",
+        "availableMinutes": "400"
+      }
+    ]
+  }
+}
