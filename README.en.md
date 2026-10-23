@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: Nearest-stop route baseline
+
+Produces a deterministic nearest-neighbor baseline using Haversine distances, without paid maps or claims of optimal road routing. Signed-in users can edit inputs and export real computed results. See [API, examples and limitations](docs/AI_OPERATIONS_UPGRADE_20261023.md). No external model calls or automatic business changes; existing licensing and contacts remain unchanged.
+
 # ZhuaTech Routeai
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise AI-assisted workflows with human governance.
